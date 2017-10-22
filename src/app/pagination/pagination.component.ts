@@ -48,7 +48,7 @@ export class PaginationComponent {
   }
 
   lastPage(): boolean {
-    return this.perPage * this.page > this.count;
+    return this.perPage * this.page == this.count;
   }
 
   getFirstPage(){
@@ -75,6 +75,8 @@ export class PaginationComponent {
       }
     }
     pages.sort((a, b) => a - b);
+    console.log(pages);
+    
     return pages;
   }
 }

@@ -5,8 +5,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div *ngIf="count > 0">  
   <div class="numbers">
-    <button class="link btn btn-default glyphicon glyphicon-menu-left" (click)="onPrev()" [disabled]="page === 1 || loading" [ngClass]="{ 'disabled': page === 1 || loading }"></button>
+      <button class="link btn btn-default" (click)="onPage(getFirstPage())">First</button>
+    <button class="link btn btn-default glyphicon glyphicon-menu-left" (click)="onPrev()" [hidden]="page === 1 || loading" [ngClass]="{ 'hidden': page === 1 || loading }"></button>
     <button class="link btn btn-default" *ngFor="let pageNum of getPages()" (click)="onPage(pageNum)" [ngClass]="{'active': pageNum === page, 'disabled': loading}">{{ pageNum }}</button>
-    <button class="link btn btn-default glyphicon glyphicon-menu-right" (click)="onNext(true)" [disabled]="lastPage() || loading" [ngClass]="{ 'disabled': lastPage() || loading }"></button>
+    <button class="link btn btn-default glyphicon glyphicon-menu-right" (click)="onNext(true)" [hidden]="lastPage() || loading" [ngClass]="{ 'hidden': lastPage() || loading }"></button>
+    <button class="link btn btn-default" (click)="onPage(totalPages())">Last</button>
   </div>
 </div>

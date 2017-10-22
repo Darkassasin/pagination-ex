@@ -5,14 +5,6 @@ import { Observable } from 'rxjs/Rx';
 
 @Injectable()
 export class UserService {
-    // getUsers():Promise<User[]>{
-    //     return Promise.resolve(users);
-    // };
-
-    // getUser(id:number):Promise<User>{
-    //     return this.getUsers().then(users=>users.find(user=>user.id===id));
-    // }
-
     getUsers(page:number,limit:number){
         const value={
             total:USERS.length,

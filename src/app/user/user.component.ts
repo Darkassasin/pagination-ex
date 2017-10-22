@@ -31,11 +31,10 @@ export class UserComponent implements OnInit {
     });
   }
 
-  onPage(n: number): void {
+  goToPage(n: number): void {
     this.page = n;
     this.getUsers();
   }
-  
 
   onNext(): void {
     console.log(this.page);
