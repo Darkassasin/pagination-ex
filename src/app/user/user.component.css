@@ -1,0 +1,10 @@
+ul{
+    list-style: none;
+}
+span{
+    background-color:greenyellow;
+}
+li{
+    display: inline;
+    background-color: rgb(110, 255, 110);
+}
